@@ -11,11 +11,12 @@
   
   a {
     text-decoration: none;
+    position: absolute center;
+    
+    top:0px
   }
   
-  .clear {
-    clear: left;
-  }
+ 
   
   .container {
     max-width: 1000px;
@@ -27,22 +28,31 @@
   
   .top-wrapper {
     padding: 100px 0 100px 0;
-    background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
+    background-image: url(ds10.jpg);
     background-size: cover;
-    color: white;
+    color: rgba(253, 253, 253, 0.87);
     text-align: center;
   }
-  
+  .top-wrapper span{
+    color:deepskyblue;
+    text-decoration-color: cornflowerblue;
+  }
   .top-wrapper h1 {
     opacity: 0.7;
-    font-size: 45px;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    
+  }
+  .top-wrapper span  {
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
   .top-wrapper p {
     opacity: 0.7;
     margin-bottom: 3px;
+    color: ghostwhite;
+    margin-bottom: 50px;
   }
   
   .btn-wrapper {
@@ -63,8 +73,9 @@
     margin-right: 10px;
   }
   
-  .twitter {
-    background-color: #55acee;
+  .google {
+    background-color: #be2d2d;
+    margin-left: 10px;
   }
   
   .btn {
@@ -93,7 +104,45 @@
     top: 0;
     z-index: 10;
   }
-  
+  a{
+    text-decoration: none;
+  }
+  /.message-wrapper a{
+    margin:0;
+    position:absolute;
+    
+  }
+  .clear{
+    clear:left;
+  }
+.slide {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+.slide1, .slide2, .slide3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.slide1 {
+  background: url(slide.jpg) no-repeat center;
+  background-size: cover;
+  animation: fade 8s infinite;
+  -webkit-animation:fade 8s infinite ;
+}
+.slide2 {
+  background: url(slide1.jpg) no-repeat center;
+  background-size: cover;
+  animation: fade2 8s infinite;
+  -webkit-animation:fade2 8s infinite ;
+}
+.slide3 {
+  background: url(slide2.jpg) no-repeat center;
+  background-size: cover;
+  animation: fade3 8s infinite;
+  -webkit-animation:fade3 8s infinite ;
+}
   .logo {
     width: 124px;
     margin-top: 20px;
@@ -131,22 +180,30 @@
   
   .lesson-wrapper {
     padding-bottom: 80px;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #000000;
+    background-position: center;
+    background-color: #a8d4e9;
     text-align: center;
-    background-image: url(https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=707&q=80);
+    background-image: url(ds9.jpg);
+
     display: flex;
     background-size: cover;
     justify-content:center;
-    min-height: 100vh;
+    
     align-items: center;
   }
   
   .heading {
     padding-top: 80px;
     padding-bottom: 50px;
-    color: #5f5d60;
+    color: #e0a1ff;
+
+  }
+
+  .message-wrapper .heading {
+    display: block;
+    border-radius: 4px;
+    background-color: rgba(15, 104, 92, 0.9);
+    block-size: auto;
   }
   
   .heading h2 {
@@ -160,16 +217,26 @@
   }
   
   .message-wrapper {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 80px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-bottom: 0;
     text-align: center;
+    align-items: center;
+    width:100%;;
+    
   }
-  
+  .message-wrapper h2{
+    color:silver;
+  }
+  .message-wrapper h3{
+color: thistle;
+  }
+
   .message {
     padding: 15px 40px;
-    background-color: #5dca88;
+    background-color: rgba(197, 124, 179, 0.8);
     cursor: pointer;
-    box-shadow: 0 7px #1a7940;
+    box-shadow: 0 7px #f01d91;
+    margin-bottom: 10px;
   }
   
   .message:active {
@@ -190,6 +257,10 @@
   footer {
     padding-top: 30px;
     padding-bottom: 20px;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
   }
 
   .container .card {
@@ -221,7 +292,7 @@
   }
 
   .container .card .face.face1 .content {
-    opacity : 0.3;
+    opacity : 0.5;
     transition: 0.5;
 
   }
@@ -249,8 +320,8 @@
     justify-content:center;
     align-items:center;
     padding: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-300)px;
+    box-shadow: 0 20px 50px rgba(197, 124, 179, 0.8);
+    transform: translateY(0);
   }
 
   .container .card:hover .face.face2{
@@ -276,4 +347,62 @@
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
   }
-  
+
+  header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(15, 104, 92, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    font-family: "Lucida Grande";
+
+}
+.logo {
+    width: 124px;
+    margin-top: 20px;
+}
+.header-left {
+    float: left;
+}
+.header-right {
+    float: right;
+    margin-right: -25px;
+}
+.header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+.header-right a:hover {
+    background-color: rgba(46, 216, 193, 0.671);
+}
+.menu-icon {
+    color: white;
+    float: right;
+    font-size: 25px;
+    padding: 21px 0;
+    display: none;
+}
+
+@keyframes fade {
+  0% {opacity:1 ;}
+  33.333% {opacity:0 ;}
+  66.666% {opacity:0 ;}
+  100% {opacity:1 ;}
+}
+@keyframes fade2 {
+  0% {opacity: 0;}
+  33.333% {opacity: 1;}
+  66.666% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes fade3 {
+  0% {opacity:0 ;}
+  33.333% {opacity:0 ;}
+  66.666% {opacity: 1;}
+  100% {opacity: 0;}
+}
